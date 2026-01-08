@@ -12,7 +12,7 @@ The application analyzes log files, generates a summary report, and uploads the 
 • Docker & AWS hands-on practice
 • CI/CD and automation demonstrations
 
-🧰 Tech Stack
+🧰 **Tech Stack**
 
 • Docker |• Python 3.10 |• AWS EC2 (Ubuntu)|• Amazon S3 |• AWS IAM (Role-based access) |• AWS CLI |• Git
 
