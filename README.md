@@ -5,31 +5,16 @@
 This project demonstrates a Dockerized batch-processing application deployed on an AWS EC2 instance.
 The application analyzes log files, generates a summary report, and uploads the output to Amazon S3.
 
-👉 No Flask, no UI, no ECS — pure backend DevOps workflow.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**This project is ideal for:**
 
-This project is ideal for:
-
-DevOps / Cloud portfolios
-
-Docker & AWS hands-on practice
-
-CI/CD and automation demonstrations
+• DevOps / Cloud portfolios
+• Docker & AWS hands-on practice
+• CI/CD and automation demonstrations
 
 🧰 Tech Stack
 
-Docker
-
-Python 3.10
-
-AWS EC2 (Ubuntu)
-
-Amazon S3
-
-AWS IAM (Role-based access)
-
-AWS CLI
-
-Git
+• Docker |• Python 3.10 |• AWS EC2 (Ubuntu)|• Amazon S3 |• AWS IAM (Role-based access) |• AWS CLI |• Git
 
 📂 Project Structure
 
@@ -41,36 +26,30 @@ docker-log-analyzer/
 ├── requirements.txt
 └── README.md
 
-⚙️ Application Workflow
+**⚙️ Application Workflow**
 
-Read log file (sample.log)
-
-Count log levels:
-
-INFO
-
-WARNING
-
-ERROR
-
-Generate report file (log_summary.txt)
-
-Upload the report to an Amazon S3 bucket
-
-🐍 Application Code (Logic)
+1. Read log file (sample.log)
+2. Count log levels:
+   • INFO
+   • WARNING
+   • ERROR
+3. Generate report file (log_summary.txt)
+4. Upload the report to an Amazon S3 bucket
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**🐍 Application Code (Logic)**
 
 The Python application:
+  • Parses logs using collections.Counter
+  • Generates a text summary
+  • Uses boto3 to upload results to S3
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📦 **requirements.txt**
 
-Parses logs using collections.Counter
-
-Generates a text summary
-
-Uses boto3 to upload results to S3
-
-📦 requirements.txt
 boto3
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-🐳 Dockerfile
+🐳 **Dockerfile**
+
 FROM python:3.10-slim
 
 WORKDIR /app
@@ -82,47 +61,53 @@ COPY app/ .
 
 CMD ["python", "analyze_logs.py"]
 
-☁️ AWS Prerequisites
-1️⃣ EC2 Instance
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Ubuntu 22.04
+☁️ **AWS Prerequisites**
 
-Instance type: t2.micro / t3.micro
+1️⃣ **EC2 Instance**
 
-Port 22 open for SSH
+• Ubuntu 22.04
+• Instance type: t2.micro / t3.micro
+• Port 22 open for SSH
 
-2️⃣ IAM Role
+2️⃣ **IAM Role**
 
 Attach the following policy to the EC2 instance:
 
 AmazonS3FullAccess
 
-
 This avoids hardcoding AWS credentials inside Docker containers.
 
-🔧 EC2 Setup
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔧 **EC2 Setup**
+
 sudo apt update
 sudo apt install docker.io awscli git -y
 sudo systemctl start docker
 sudo usermod -aG docker ubuntu
 logout
 
-
 Log back in after logout.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-🚀 Deployment Steps
-1️⃣ Clone the Repository
+🚀 **Deployment Steps**
+
+1️⃣ **Clone the Repository**
+
 git clone https://github.com/your-username/docker-log-analyzer.git
 cd docker-log-analyzer
 
-2️⃣ Build Docker Image
+2️⃣ **Build Docker Image**
+
 docker build -t log-analyzer:v1 .
 
-3️⃣ Run the Container
+3️⃣ **Run the Container**
+
 docker run --rm log-analyzer:v1
 
 📤 Output
 
 Report generated: log_summary.txt
-
-Automatically uploaded to:
+Automatically uploaded to S3
