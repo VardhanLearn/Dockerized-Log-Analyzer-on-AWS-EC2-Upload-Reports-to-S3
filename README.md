@@ -36,9 +36,13 @@ The application analyzes log files, generates a summary report, and uploads the 
 **🐍 Application Code (Logic)**
 
 The Python application:
+
   • Parses logs using collections.Counter
+  
   • Generates a text summary
+  
   • Uses boto3 to upload results to S3
+  
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ☁️ **AWS Prerequisites**
