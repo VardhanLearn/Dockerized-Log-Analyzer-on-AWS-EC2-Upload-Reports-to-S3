@@ -25,9 +25,11 @@ The application analyzes log files, generates a summary report, and uploads the 
 
 1. Read log file (sample.log)
 2. Count log levels:
+   
    • INFO
    • WARNING
    • ERROR
+   
 3. Generate report file (log_summary.txt)
 4. Upload the report to an Amazon S3 bucket
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
