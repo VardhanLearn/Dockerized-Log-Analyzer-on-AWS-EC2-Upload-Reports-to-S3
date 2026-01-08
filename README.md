@@ -18,13 +18,8 @@ The application analyzes log files, generates a summary report, and uploads the 
 
 📂 Project Structure
 
-docker-log-analyzer/
-├── app/
-│   ├── analyze_logs.py
-│   └── sample.log
-├── Dockerfile
-├── requirements.txt
-└── README.md
+<img width="695" height="224" alt="Screenshot from 2026-01-08 18-00-45" src="https://github.com/user-attachments/assets/b29384dd-2ec9-434e-877a-ce947327c1d0" />
+
 
 **⚙️ Application Workflow**
 
