@@ -100,3 +100,18 @@ docker run --rm log-analyzer:v1
 
 Report generated: log_summary.txt
 Automatically uploaded to S3
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔄 **End-to-End Flow**
+
+<img width="679" height="331" alt="Screenshot from 2026-01-08 18-08-04" src="https://github.com/user-attachments/assets/e1d55130-b51a-40eb-877d-816d52a2811c" />
+
+👤 **Author**
+
+**Vardhan Kandregula DevOps Engineer** | AWS | Docker | Kubernetes | CI/CD
+
+📌 This project is part of my DevOps learning and portfolio.
+
+⭐ If you like this project
+
+Give it a ⭐ on GitHub and feel free to fork or contribute!
