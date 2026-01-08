@@ -50,7 +50,9 @@ The Python application:
 1️⃣ **EC2 Instance**
 
 • Ubuntu 22.04
+
 • Instance type: t2.micro / t3.micro
+
 • Port 22 open for SSH
 
 2️⃣ **IAM Role**
@@ -65,10 +67,14 @@ This avoids hardcoding AWS credentials inside Docker containers.
 
 🔧 **EC2 Setup**
 
-sudo apt update
-sudo apt install docker.io awscli git -y
-sudo systemctl start docker
-sudo usermod -aG docker ubuntu
+• sudo apt update
+
+• sudo apt install docker.io awscli git -y
+
+• sudo systemctl start docker
+
+• sudo usermod -aG docker ubuntu
+
 logout
 
 Log back in after logout.
@@ -78,7 +84,8 @@ Log back in after logout.
 
 1️⃣ **Clone the Repository**
 
-git clone https://github.com/your-username/docker-log-analyzer.git
+git clone https://github.com/VardhanLearn/Dockerized-Log-Analyzer-on-AWS-EC2-Upload-Reports-to-S3.git
+
 cd docker-log-analyzer
 
 2️⃣ **Build Docker Image**
